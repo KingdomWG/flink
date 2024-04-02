@@ -1,0 +1,477 @@
+2024-04-02 14:58:18,253 WARN  com.ververica.cdc.cli.CliFrontend                            [] - Cannot find global configuration in command-line or FLINK_CDC_HOME. Will use empty global configuration.
+2024-04-02 15:00:31,277 WARN  com.ctrip.framework.foundation.internals.provider.DefaultApplicationProvider [] - app.id is not available from System Property and /META-INF/app.properties. It is set to null
+2024-04-02 15:00:31,279 INFO  com.ctrip.framework.foundation.internals.provider.DefaultServerProvider [] - Environment is set to null. Because it is not available in either (1) JVM system property 'env', (2) OS env variable 'ENV' nor (3) property 'env' from the properties InputStream.
+2024-04-02 15:00:31,341 WARN  tech.echoing.apollo.client.internals.ConfigServiceLocator    [] - Located config services from apollo.configService configuration: http://dev-apollo.echoing.tech, will not refresh config services from remote meta service!
+2024-04-02 15:01:57,756 WARN  com.ververica.cdc.connectors.mysql.factory.MySqlDataSourceFactory [] - server-time-zone is not set, which might cause data inconsistencies for time-related fields.
+2024-04-02 15:01:57,763 INFO  com.ververica.cdc.connectors.mysql.utils.OptionUtils         [] - Print mysql connector configuration:
+2024-04-02 15:01:57,763 INFO  com.ververica.cdc.connectors.mysql.utils.OptionUtils         [] - hostname = 10.30.10.10
+2024-04-02 15:01:57,763 INFO  com.ververica.cdc.connectors.mysql.utils.OptionUtils         [] - password = ******
+2024-04-02 15:01:57,763 INFO  com.ververica.cdc.connectors.mysql.utils.OptionUtils         [] - tables = config.configs
+2024-04-02 15:01:57,764 INFO  com.ververica.cdc.connectors.mysql.utils.OptionUtils         [] - port = 3316
+2024-04-02 15:01:57,764 INFO  com.ververica.cdc.connectors.mysql.utils.OptionUtils         [] - username = user_config
+2024-04-02 15:01:57,764 INFO  com.ververica.cdc.connectors.mysql.utils.OptionUtils         [] - server-id = 5400-5404
+2024-04-02 15:01:58,019 WARN  io.debezium.connector.mysql.MySqlConnection                  [] - Database configuration option 'serverTimezone' is set but is obsolete, please use 'connectionTimeZone' instead
+2024-04-02 15:01:58,031 INFO  com.ververica.cdc.connectors.mysql.utils.MySqlSchemaUtils    [] - Read list of available databases
+2024-04-02 15:01:58,051 INFO  ru.yandex.clickhouse.ClickHouseDriver                        [] - Driver registered
+2024-04-02 15:01:58,618 INFO  com.ververica.cdc.connectors.mysql.utils.MySqlSchemaUtils    [] - 	 list of available databases are: [config]
+2024-04-02 15:01:58,618 INFO  com.ververica.cdc.connectors.mysql.utils.MySqlSchemaUtils    [] - Read list of available tables in config
+2024-04-02 15:01:58,650 INFO  com.ververica.cdc.connectors.mysql.utils.MySqlSchemaUtils    [] - 	 list of available tables are: [config.channel, config.channel_relation, config.configs, config.debezium_signal, config.dic-black-white-words, config.dic-black-words-reasons, config.dic-reasons-infos, config.package_sign_infos, config.projects, config.versions]
+2024-04-02 15:01:58,686 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-04-02 15:02:00,792 INFO  com.starrocks.connector.flink.table.sink.SinkFunctionFactory [] - StarRocks supports transaction load
+2024-04-02 15:02:00,793 INFO  com.starrocks.connector.flink.table.sink.SinkFunctionFactory [] - Choose sink version V2 for at-least-once.
+2024-04-02 15:02:00,793 INFO  com.starrocks.connector.flink.table.sink.SinkFunctionFactory [] - Choose sink version V2
+2024-04-02 15:02:01,200 INFO  com.starrocks.connector.flink.manager.StarRocksQueryVisitor  [] - StarRocks version: [3.2.2-269e832].
+2024-04-02 15:02:01,201 INFO  com.starrocks.connector.flink.table.sink.StarRocksSinkOptions [] - Enable transaction stream load
+2024-04-02 15:02:01,204 INFO  com.starrocks.data.load.stream.StarRocksVersion              [] - Successful to parse starrocks version 3.2.2-269e832, StarRocksVersion{major=3, minor=2, patch=2}
+2024-04-02 15:02:23,892 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+2024-04-02 15:02:23,893 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+2024-04-02 15:02:23,893 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+2024-04-02 15:02:23,896 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+2024-04-02 15:02:23,896 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+2024-04-02 15:02:23,897 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils [] - The configuration option taskmanager.memory.managed.size required for local execution is not set, setting it to its default value 128 mb.
+2024-04-02 15:02:23,900 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting Flink Mini Cluster
+2024-04-02 15:02:24,093 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting Metrics Registry
+2024-04-02 15:02:24,173 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2024-04-02 15:02:24,174 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting RPC Service(s)
+2024-04-02 15:02:24,186 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start local actor system
+2024-04-02 15:02:24,909 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2024-04-02 15:02:25,061 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko://flink
+2024-04-02 15:02:25,085 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Trying to start local actor system
+2024-04-02 15:02:25,115 INFO  org.apache.pekko.event.slf4j.Slf4jLogger                     [] - Slf4jLogger started
+2024-04-02 15:02:25,133 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcServiceUtils      [] - Actor system started at pekko://flink-metrics
+2024-04-02 15:02:25,169 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at pekko://flink-metrics/user/rpc/MetricQueryService .
+2024-04-02 15:02:25,207 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+2024-04-02 15:02:25,216 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/hdfs/HdfsConfiguration".
+2024-04-02 15:02:25,216 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+2024-04-02 15:02:25,225 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+2024-04-02 15:02:25,226 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+2024-04-02 15:02:25,226 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2024-04-02 15:02:25,228 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2024-04-02 15:02:25,229 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2024-04-02 15:02:25,229 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2024-04-02 15:02:25,229 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+2024-04-02 15:02:25,229 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+2024-04-02 15:02:25,229 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Obtaining delegation tokens
+2024-04-02 15:02:25,233 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation tokens obtained successfully
+2024-04-02 15:02:25,233 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2024-04-02 15:02:25,233 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2024-04-02 15:02:25,234 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2024-04-02 15:02:25,234 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2024-04-02 15:02:25,234 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2024-04-02 15:02:25,353 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /var/folders/x3/5lrzsr7n50l82z74n6bl0r600000gn/T/minicluster_823adf4663477656df9a544c7a52bd3c/blobStorage
+2024-04-02 15:02:25,375 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 0.0.0.0:56715 - max concurrent requests: 50 - max backlog: 1000
+2024-04-02 15:02:25,381 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /var/folders/x3/5lrzsr7n50l82z74n6bl0r600000gn/T/minicluster_823adf4663477656df9a544c7a52bd3c/blobStorage
+2024-04-02 15:02:25,382 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /var/folders/x3/5lrzsr7n50l82z74n6bl0r600000gn/T/minicluster_823adf4663477656df9a544c7a52bd3c/blobStorage
+2024-04-02 15:02:25,383 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Starting 1 TaskManager(s)
+2024-04-02 15:02:25,389 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: c16b6c20-7cc0-4947-b484-ae8686df2e1a
+2024-04-02 15:02:25,410 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/var/folders/x3/5lrzsr7n50l82z74n6bl0r600000gn/T': total 460 GB, usable 275 GB (59.78% usable)
+2024-04-02 15:02:25,413 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	/var/folders/x3/5lrzsr7n50l82z74n6bl0r600000gn/T/flink-io-c596f470-4c51-42cb-b47f-3177f01f3a0b
+2024-04-02 15:02:25,419 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	/var/folders/x3/5lrzsr7n50l82z74n6bl0r600000gn/T/flink-netty-shuffle-f4e6fe54-6d32-495b-88c6-27d3ebc26fc2
+2024-04-02 15:02:25,446 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+2024-04-02 15:02:25,464 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+2024-04-02 15:02:25,465 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+2024-04-02 15:02:25,488 INFO  org.apache.flink.configuration.Configuration                 [] - Config uses fallback configuration key 'pekko.ask.timeout' instead of key 'taskmanager.slot.timeout'
+2024-04-02 15:02:25,500 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at pekko://flink/user/rpc/taskmanager_0 .
+2024-04-02 15:02:25,529 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+2024-04-02 15:02:25,535 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /var/folders/x3/5lrzsr7n50l82z74n6bl0r600000gn/T/flink-dist-cache-abc4909b-d640-42b3-aeb5-610d873162ba
+2024-04-02 15:02:25,589 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Starting rest endpoint.
+2024-04-02 15:02:25,734 WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Log file environment variable 'log.file' is not set.
+2024-04-02 15:02:25,735 WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+2024-04-02 15:02:25,880 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Rest endpoint listening at localhost:56716
+2024-04-02 15:02:25,882 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to the contender that is registered under component ID 'rest_server'.
+2024-04-02 15:02:25,898 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - Web frontend listening at http://localhost:56716.
+2024-04-02 15:02:25,898 INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint   [] - http://localhost:56716 was granted leadership with leaderSessionID=9d25d470-04e2-4f06-be86-2039ea9a0b8b
+2024-04-02 15:02:25,899 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader http://localhost:56716 , session=9d25d470-04e2-4f06-be86-2039ea9a0b8b
+2024-04-02 15:02:25,921 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to the contender that is registered under component ID 'dispatcher'.
+2024-04-02 15:02:25,922 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+2024-04-02 15:02:25,922 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to the contender that is registered under component ID 'resource_manager'.
+2024-04-02 15:02:25,923 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id a5b50936-23ed-481d-8fee-bd278cab84d4. Creating new DispatcherLeaderProcess.
+2024-04-02 15:02:25,923 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 02174de5-396d-4cea-bde9-1f938f3437e0.
+2024-04-02 15:02:25,931 INFO  org.apache.flink.runtime.minicluster.MiniCluster             [] - Flink Mini Cluster started successfully
+2024-04-02 15:02:25,931 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+2024-04-02 15:02:25,943 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+2024-04-02 15:02:25,943 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+2024-04-02 15:02:25,949 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at pekko://flink/user/rpc/resourcemanager_1 .
+2024-04-02 15:02:25,958 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at pekko://flink/user/rpc/dispatcher_2 .
+2024-04-02 15:02:25,978 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+2024-04-02 15:02:25,983 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Starting the slot manager.
+2024-04-02 15:02:25,985 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+2024-04-02 15:02:25,986 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+2024-04-02 15:02:25,986 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+2024-04-02 15:02:25,988 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader pekko://flink/user/rpc/resourcemanager_1 , session=02174de5-396d-4cea-bde9-1f938f3437e0
+2024-04-02 15:02:25,991 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager pekko://flink/user/rpc/resourcemanager_1(bde91f938f3437e002174de5396d4cea).
+2024-04-02 15:02:26,002 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader pekko://flink/user/rpc/dispatcher_2 , session=a5b50936-23ed-481d-8fee-bd278cab84d4
+2024-04-02 15:02:26,047 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Resolved ResourceManager address, beginning registration
+2024-04-02 15:02:26,097 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID c16b6c20-7cc0-4947-b484-ae8686df2e1a (pekko://flink/user/rpc/taskmanager_0) at ResourceManager
+2024-04-02 15:02:26,102 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Successful registration at resource manager pekko://flink/user/rpc/resourcemanager_1 under registration id 4f9cfaa4a86236e34e18b83d5c23c4dc.
+2024-04-02 15:02:26,116 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Registering task executor c16b6c20-7cc0-4947-b484-ae8686df2e1a under 4f9cfaa4a86236e34e18b83d5c23c4dc at the slot manager.
+2024-04-02 15:02:26,741 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'Sync MySQL Database to StarRocks' (d7d71fa472dfe3f32b52821b64732143).
+2024-04-02 15:02:26,744 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Sync MySQL Database to StarRocks' (d7d71fa472dfe3f32b52821b64732143).
+2024-04-02 15:02:26,761 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Proposing leadership to the contender that is registered under component ID 'job-d7d71fa472dfe3f32b52821b64732143'.
+2024-04-02 15:02:26,762 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job d7d71fa472dfe3f32b52821b64732143 was granted leadership with leader id e15b379e-07ba-49a6-be76-1ad2b8cd807e. Creating new JobMasterServiceProcess.
+2024-04-02 15:02:26,772 INFO  org.apache.flink.runtime.rpc.pekko.PekkoRpcService           [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at pekko://flink/user/rpc/jobmanager_3 .
+2024-04-02 15:02:26,786 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Sync MySQL Database to StarRocks' (d7d71fa472dfe3f32b52821b64732143).
+2024-04-02 15:02:26,807 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for Sync MySQL Database to StarRocks (d7d71fa472dfe3f32b52821b64732143).
+2024-04-02 15:02:26,846 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph bccb0d531b376f1b91cb5c25753536fa for job d7d71fa472dfe3f32b52821b64732143.
+2024-04-02 15:02:26,864 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Sync MySQL Database to StarRocks (d7d71fa472dfe3f32b52821b64732143).
+2024-04-02 15:02:26,866 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 1 ms.
+2024-04-02 15:02:27,033 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+2024-04-02 15:02:27,037 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@5b819343
+2024-04-02 15:02:27,037 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-04-02 15:02:27,038 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+2024-04-02 15:02:27,061 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+2024-04-02 15:02:27,066 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@2c0791b5 for Sync MySQL Database to StarRocks (d7d71fa472dfe3f32b52821b64732143).
+2024-04-02 15:02:27,073 INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService [] - Received confirmation of leadership for leader pekko://flink/user/rpc/jobmanager_3 , session=e15b379e-07ba-49a6-be76-1ad2b8cd807e
+2024-04-02 15:02:27,074 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Sync MySQL Database to StarRocks' (d7d71fa472dfe3f32b52821b64732143) under job master id be761ad2b8cd807ee15b379e07ba49a6.
+2024-04-02 15:02:27,077 INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator [] - Starting split enumerator for source Source: Flink CDC Event Source: mysql.
+2024-04-02 15:02:27,174 INFO  com.ververica.cdc.connectors.mysql.source.connection.JdbcConnectionPools [] - Create and register connection pool user_config@10.30.10.10:3316
+2024-04-02 15:02:27,185 INFO  com.ververica.cdc.connectors.shaded.com.zaxxer.hikari.HikariDataSource [] - connection-pool-10.30.10.10:3316 - Starting...
+2024-04-02 15:02:27,193 INFO  ru.yandex.clickhouse.ClickHouseDriver                        [] - Driver registered
+2024-04-02 15:02:27,729 INFO  com.ververica.cdc.connectors.shaded.com.zaxxer.hikari.HikariDataSource [] - connection-pool-10.30.10.10:3316 - Start completed.
+2024-04-02 15:02:27,901 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-04-02 15:02:27,902 INFO  com.ververica.cdc.connectors.mysql.MySqlValidator            [] - MySQL validation passed.
+2024-04-02 15:02:28,045 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-04-02 15:02:28,051 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaRegistry [] - Starting SchemaRegistry for SchemaOperator.
+2024-04-02 15:02:28,052 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaRegistry [] - Started SchemaRegistry for SchemaOperator.
+2024-04-02 15:02:28,052 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+2024-04-02 15:02:28,052 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Sync MySQL Database to StarRocks (d7d71fa472dfe3f32b52821b64732143) switched from state CREATED to RUNNING.
+2024-04-02 15:02:28,056 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1) (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to SCHEDULED.
+2024-04-02 15:02:28,057 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1) (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) switched from CREATED to SCHEDULED.
+2024-04-02 15:02:28,072 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager pekko://flink/user/rpc/resourcemanager_1(bde91f938f3437e002174de5396d4cea)
+2024-04-02 15:02:28,077 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+2024-04-02 15:02:28,081 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager be761ad2b8cd807ee15b379e07ba49a6@pekko://flink/user/rpc/jobmanager_3 for job d7d71fa472dfe3f32b52821b64732143.
+2024-04-02 15:02:28,081 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - Read list of available databases
+2024-04-02 15:02:28,113 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 list of available databases is: [information_schema, config, mysql]
+2024-04-02 15:02:28,113 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - Read list of available tables in each database
+2024-04-02 15:02:28,123 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager be761ad2b8cd807ee15b379e07ba49a6@pekko://flink/user/rpc/jobmanager_3 for job d7d71fa472dfe3f32b52821b64732143.
+2024-04-02 15:02:28,124 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: bde91f938f3437e002174de5396d4cea.
+2024-04-02 15:02:28,125 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Received resource requirements from job d7d71fa472dfe3f32b52821b64732143: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.channel' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.channel_relation' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 including table 'config.configs' for further processing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.debezium_signal' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.dic-black-white-words' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.dic-black-words-reasons' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.dic-reasons-infos' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.package_sign_infos' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.projects' is filtered out of table capturing
+2024-04-02 15:02:28,156 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.versions' is filtered out of table capturing
+2024-04-02 15:02:28,176 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.event' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.func' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.general_log' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_category' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_keyword' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_relation' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_topic' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.proc' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.slow_log' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_leap_second' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_name' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_transition' is filtered out of table capturing
+2024-04-02 15:02:28,177 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_transition_type' is filtered out of table capturing
+2024-04-02 15:02:28,193 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.FineGrainedSlotManager [] - Matching resource requirements against available resources.
+Missing resources:
+	 Job d7d71fa472dfe3f32b52821b64732143
+		ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}
+Current resources:
+	TaskManager c16b6c20-7cc0-4947-b484-ae8686df2e1a
+		Available: ResourceProfile{taskHeapMemory=1024.000gb (1099511627776 bytes), taskOffHeapMemory=1024.000gb (1099511627776 bytes), managedMemory=128.000mb (134217728 bytes), networkMemory=64.000mb (67108864 bytes)}
+		Total:     ResourceProfile{taskHeapMemory=1024.000gb (1099511627776 bytes), taskOffHeapMemory=1024.000gb (1099511627776 bytes), managedMemory=128.000mb (134217728 bytes), networkMemory=64.000mb (67108864 bytes)}
+2024-04-02 15:02:28,197 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DefaultSlotStatusSyncer [] - Starting allocation of slot 09d5cac1ab738ab914f63b0f74bbd96e from c16b6c20-7cc0-4947-b484-ae8686df2e1a for job d7d71fa472dfe3f32b52821b64732143 with resource profile ResourceProfile{taskHeapMemory=1024.000gb (1099511627776 bytes), taskOffHeapMemory=1024.000gb (1099511627776 bytes), managedMemory=128.000mb (134217728 bytes), networkMemory=64.000mb (67108864 bytes)}.
+2024-04-02 15:02:28,201 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request 09d5cac1ab738ab914f63b0f74bbd96e for job d7d71fa472dfe3f32b52821b64732143 from resource manager with leader id bde91f938f3437e002174de5396d4cea.
+2024-04-02 15:02:28,201 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Allocated slot for 09d5cac1ab738ab914f63b0f74bbd96e with resources ResourceProfile{taskHeapMemory=1024.000gb (1099511627776 bytes), taskOffHeapMemory=1024.000gb (1099511627776 bytes), managedMemory=128.000mb (134217728 bytes), networkMemory=64.000mb (67108864 bytes)}.
+2024-04-02 15:02:28,204 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job d7d71fa472dfe3f32b52821b64732143 for job leader monitoring.
+2024-04-02 15:02:28,206 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager pekko://flink/user/rpc/jobmanager_3 with leader id e15b379e-07ba-49a6-be76-1ad2b8cd807e.
+2024-04-02 15:02:28,206 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+2024-04-02 15:02:28,209 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager pekko://flink/user/rpc/jobmanager_3 for job d7d71fa472dfe3f32b52821b64732143.
+2024-04-02 15:02:28,210 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job d7d71fa472dfe3f32b52821b64732143.
+2024-04-02 15:02:28,212 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job d7d71fa472dfe3f32b52821b64732143.
+2024-04-02 15:02:28,218 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1) (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from SCHEDULED to DEPLOYING.
+2024-04-02 15:02:28,220 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1) (attempt #0) with attempt id bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0 and vertex id cbc357ccb763df2852fee8c4fc7d55f2_0 to c16b6c20-7cc0-4947-b484-ae8686df2e1a @ localhost (dataPort=-1) with allocation id 09d5cac1ab738ab914f63b0f74bbd96e
+2024-04-02 15:02:28,228 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-04-02 15:02:28,235 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1) (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) switched from SCHEDULED to DEPLOYING.
+2024-04-02 15:02:28,236 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1) (attempt #0) with attempt id bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0 and vertex id 0deb1b26a3d9eb3c8f0c11f7110b2903_0 to c16b6c20-7cc0-4947-b484-ae8686df2e1a @ localhost (dataPort=-1) with allocation id 09d5cac1ab738ab914f63b0f74bbd96e
+2024-04-02 15:02:28,235 INFO  com.ververica.cdc.connectors.mysql.source.assigners.MySqlSnapshotSplitAssigner [] - Start splitting table config.configs into chunks...
+2024-04-02 15:02:28,236 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 09d5cac1ab738ab914f63b0f74bbd96e.
+2024-04-02 15:02:28,278 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2024-04-02 15:02:28,279 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+2024-04-02 15:02:28,286 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Creating the channel state executor factory for job id d7d71fa472dfe3f32b52821b64732143
+2024-04-02 15:02:28,307 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0), deploy into slot with allocation id 09d5cac1ab738ab914f63b0f74bbd96e.
+2024-04-02 15:02:28,311 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from CREATED to DEPLOYING.
+2024-04-02 15:02:28,318 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 09d5cac1ab738ab914f63b0f74bbd96e.
+2024-04-02 15:02:28,319 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) [DEPLOYING].
+2024-04-02 15:02:28,354 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0), deploy into slot with allocation id 09d5cac1ab738ab914f63b0f74bbd96e.
+2024-04-02 15:02:28,355 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) switched from CREATED to DEPLOYING.
+2024-04-02 15:02:28,356 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) [DEPLOYING].
+2024-04-02 15:02:28,358 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 09d5cac1ab738ab914f63b0f74bbd96e.
+2024-04-02 15:02:28,366 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@c7da9e9
+2024-04-02 15:02:28,366 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-04-02 15:02:28,366 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-04-02 15:02:28,376 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) switched from DEPLOYING to INITIALIZING.
+2024-04-02 15:02:28,377 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1) (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) switched from DEPLOYING to INITIALIZING.
+2024-04-02 15:02:28,378 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@18d66cac
+2024-04-02 15:02:28,378 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+2024-04-02 15:02:28,378 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+2024-04-02 15:02:28,378 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2024-04-02 15:02:28,380 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1) (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from DEPLOYING to INITIALIZING.
+2024-04-02 15:02:28,579 INFO  com.starrocks.data.load.stream.v2.FlushAndCommitStrategy     [] - FlushAndCommitStrategy{expectDelayTime=300000, scanFrequency=50, ageThreshold=6000, maxCacheBytes=94371840, enableAutoCommit=true, numAgeTriggerFlush=0, numCacheTriggerFlush=0, numTableTriggerFlush=0}
+2024-04-02 15:02:28,582 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - manager running, scanningFrequency : 50
+2024-04-02 15:02:28,589 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - StarRocks-Sink-Manager start, enableAutoCommit: true, streamLoader: com.starrocks.data.load.stream.TransactionStreamLoader, GitInformation{gitBuildTime='2023-12-02T20:50:45+0800', gitCommitId='7f529eb51b7bd3d1eaffcb19293ea7213faebf74', gitCommitIdAbbrev='7f529eb', gitCommitTime='2023-12-01T23:39:18+0800'}
+2024-04-02 15:02:28,940 INFO  com.starrocks.data.load.stream.DefaultStreamLoader           [] - Default Stream Loader start, properties : {"jdbcUrl":"jdbc:mysql://10.20.221.2:9030/?useSSL=false","loadUrls":["http://10.20.221.2:8030"],"username":"root","version":"3.2.2-269e832","starRocksVersion":{"major":3,"minor":2,"patch":2},"labelPrefix":null,"defaultTableProperties":{"uniqueKey":"*-*","database":"*","table":"*","dataFormat":"JsonFormat{first=[, delimiter=,, end=]}","properties":{"db":"*","table":"*"},"enableUpsertDelete":false,"chunkLimit":3221225472,"maxBufferRows":2147483647,"columns":null},"tablePropertiesMap":{},"enableTransaction":true,"scanningFrequency":50,"maxCacheBytes":94371840,"expectDelayTime":300000,"connectTimeout":30000,"socketTimeout":0,"waitForContinueTimeoutMs":30000,"ioThreadCount":2,"writingThreshold":50,"regionBufferRatio":0.6,"youngThreshold":0.1,"oldThreshold":0.9,"maxRetries":0,"retryIntervalInMs":10000,"headers":{"format":"json","strip_outer_array":"true","ignore_json_size":"true"},"opAutoProjectionInJson":true}, defaultHeaders : [{"name":"format","value":"json","elements":[{"name":"json","value":null,"parameters":[],"parameterCount":0}]},{"name":"Authorization","value":"Basic cm9vdDo=","elements":[{"name":"Basic cm9vdDo","value":"","parameters":[],"parameterCount":0}]},{"name":"strip_outer_array","value":"true","elements":[{"name":"true","value":null,"parameters":[],"parameterCount":0}]},{"name":"Expect","value":"100-continue","elements":[{"name":"100-continue","value":null,"parameters":[],"parameterCount":0}]},{"name":"ignore_json_size","value":"true","elements":[{"name":"true","value":null,"parameters":[],"parameterCount":0}]},{"name":"timeout","value":"600","elements":[{"name":"600","value":null,"parameters":[],"parameterCount":0}]}]
+2024-04-02 15:02:28,958 INFO  com.starrocks.connector.flink.table.sink.v2.StarRocksCommitter [] - Create StarRocksCommitter, maxRetries: 3. GitInformation{gitBuildTime='2023-12-02T21:04:59+0800', gitCommitId='7f529eb51b7bd3d1eaffcb19293ea7213faebf74', gitCommitIdAbbrev='7f529eb', gitCommitTime='2023-12-01T23:39:18+0800'}
+2024-04-02 15:02:28,989 INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator [] - Source Source: Flink CDC Event Source: mysql registering reader for parallel task 0 (#0) @ 
+2024-04-02 15:02:28,996 INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator [] - Source Source: Flink CDC Event Source: mysql received split request from parallel task 0 (#0)
+2024-04-02 15:02:29,004 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2024-04-02 15:02:29,006 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Flink CDC Event Source: mysql -> SchemaOperator -> PrePartition (1/1) (bccb0d531b376f1b91cb5c25753536fa_cbc357ccb763df2852fee8c4fc7d55f2_0_0) switched from INITIALIZING to RUNNING.
+2024-04-02 15:02:29,068 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaRegistryRequestHandler [] - Register sink subtask 0.
+2024-04-02 15:02:29,069 INFO  com.starrocks.data.load.stream.v2.FlushAndCommitStrategy     [] - FlushAndCommitStrategy{expectDelayTime=300000, scanFrequency=50, ageThreshold=6000, maxCacheBytes=94371840, enableAutoCommit=true, numAgeTriggerFlush=0, numCacheTriggerFlush=0, numTableTriggerFlush=0}
+2024-04-02 15:02:29,070 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - StarRocks-Sink-Manager start, enableAutoCommit: true, streamLoader: com.starrocks.data.load.stream.TransactionStreamLoader, GitInformation{gitBuildTime='2023-12-02T20:50:45+0800', gitCommitId='7f529eb51b7bd3d1eaffcb19293ea7213faebf74', gitCommitIdAbbrev='7f529eb', gitCommitTime='2023-12-01T23:39:18+0800'}
+2024-04-02 15:02:29,071 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - manager running, scanningFrequency : 50
+2024-04-02 15:02:29,091 INFO  com.starrocks.data.load.stream.DefaultStreamLoader           [] - Default Stream Loader start, properties : {"jdbcUrl":"jdbc:mysql://10.20.221.2:9030/?useSSL=false","loadUrls":["http://10.20.221.2:8030"],"username":"root","version":"3.2.2-269e832","starRocksVersion":{"major":3,"minor":2,"patch":2},"labelPrefix":null,"defaultTableProperties":{"uniqueKey":"*-*","database":"*","table":"*","dataFormat":"JsonFormat{first=[, delimiter=,, end=]}","properties":{"db":"*","table":"*"},"enableUpsertDelete":false,"chunkLimit":3221225472,"maxBufferRows":2147483647,"columns":null},"tablePropertiesMap":{},"enableTransaction":true,"scanningFrequency":50,"maxCacheBytes":94371840,"expectDelayTime":300000,"connectTimeout":30000,"socketTimeout":0,"waitForContinueTimeoutMs":30000,"ioThreadCount":2,"writingThreshold":50,"regionBufferRatio":0.6,"youngThreshold":0.1,"oldThreshold":0.9,"maxRetries":0,"retryIntervalInMs":10000,"headers":{"format":"json","strip_outer_array":"true","ignore_json_size":"true"},"opAutoProjectionInJson":true}, defaultHeaders : [{"name":"format","value":"json","elements":[{"name":"json","value":null,"parameters":[],"parameterCount":0}]},{"name":"Authorization","value":"Basic cm9vdDo=","elements":[{"name":"Basic cm9vdDo","value":"","parameters":[],"parameterCount":0}]},{"name":"strip_outer_array","value":"true","elements":[{"name":"true","value":null,"parameters":[],"parameterCount":0}]},{"name":"Expect","value":"100-continue","elements":[{"name":"100-continue","value":null,"parameters":[],"parameterCount":0}]},{"name":"ignore_json_size","value":"true","elements":[{"name":"true","value":null,"parameters":[],"parameterCount":0}]},{"name":"timeout","value":"600","elements":[{"name":"600","value":null,"parameters":[],"parameterCount":0}]}]
+2024-04-02 15:02:29,093 INFO  com.starrocks.connector.flink.table.sink.v2.StarRocksWriter  [] - Create StarRocksWriter. GitInformation{gitBuildTime='2023-12-02T21:04:59+0800', gitCommitId='7f529eb51b7bd3d1eaffcb19293ea7213faebf74', gitCommitIdAbbrev='7f529eb', gitCommitTime='2023-12-01T23:39:18+0800'}
+2024-04-02 15:02:29,106 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1)#0 (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) switched from INITIALIZING to RUNNING.
+2024-04-02 15:02:29,110 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - PostPartition -> Sink Writer: StarRocks Sink -> Sink Committer: StarRocks Sink (1/1) (bccb0d531b376f1b91cb5c25753536fa_0deb1b26a3d9eb3c8f0c11f7110b2903_0_0) switched from INITIALIZING to RUNNING.
+2024-04-02 15:02:29,462 INFO  com.ververica.cdc.connectors.mysql.source.assigners.MySqlChunkSplitter [] - The distribution factor of table config.configs is 1.77805928036161E14 according to the min split key 91074979097168401, max split key 711973279799442610 and approximate row count 3492
+2024-04-02 15:02:29,463 INFO  com.ververica.cdc.connectors.mysql.source.assigners.MySqlChunkSplitter [] - The actual distribution factor for table config.configs is 1.77805928036161E14, the lower bound of evenly distribution factor is 0.05, the upper bound of evenly distribution factor is 1000.0
+2024-04-02 15:02:29,464 INFO  com.ververica.cdc.connectors.mysql.source.assigners.MySqlChunkSplitter [] - Use unevenly-sized chunks for table config.configs, the chunk size is 8096 from null
+2024-04-02 15:02:29,648 INFO  com.ververica.cdc.connectors.mysql.source.assigners.MySqlChunkSplitter [] - ChunkSplitter has split 0 chunks for table config.configs
+2024-04-02 15:02:29,649 INFO  com.ververica.cdc.connectors.mysql.source.assigners.MySqlSnapshotSplitAssigner [] - Split table config.configs into 1 chunks, time cost: 1413ms.
+2024-04-02 15:02:29,677 INFO  com.ververica.cdc.connectors.mysql.source.enumerator.MySqlSourceEnumerator [] - The enumerator assigns split MySqlSnapshotSplit{tableId=config.configs, splitId='config.configs:0', splitKeyType=[`id` BIGINT NOT NULL], splitStart=null, splitEnd=null, highWatermark=null} to subtask 0
+2024-04-02 15:02:29,708 INFO  com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReader [] - Source reader 0 adds split MySqlSnapshotSplit{tableId=config.configs, splitId='config.configs:0', splitKeyType=[`id` BIGINT NOT NULL], splitStart=null, splitEnd=null, highWatermark=null}
+2024-04-02 15:02:29,709 INFO  org.apache.flink.connector.base.source.reader.SourceReaderBase [] - Adding split(s) to reader: [MySqlSnapshotSplit{tableId=config.configs, splitId='config.configs:0', splitKeyType=[`id` BIGINT NOT NULL], splitStart=null, splitEnd=null, highWatermark=null}]
+2024-04-02 15:02:29,712 INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcher [] - Starting split fetcher 0
+2024-04-02 15:02:29,713 INFO  com.ververica.cdc.connectors.mysql.source.reader.MySqlSplitReader [] - Handling split change SplitAddition:[[MySqlSnapshotSplit{tableId=config.configs, splitId='config.configs:0', splitKeyType=[`id` BIGINT NOT NULL], splitStart=null, splitEnd=null, highWatermark=null}]]
+2024-04-02 15:02:29,722 WARN  io.debezium.connector.mysql.MySqlConnection                  [] - Database configuration option 'serverTimezone' is set but is obsolete, please use 'connectionTimeZone' instead
+2024-04-02 15:02:30,037 INFO  com.ververica.cdc.connectors.mysql.debezium.task.context.StatefulTaskContext [] - Starting offset is initialized to {ts_sec=0, file=, pos=0, kind=EARLIEST, row=0, event=0}
+2024-04-02 15:02:30,108 INFO  com.ververica.cdc.connectors.mysql.debezium.task.MySqlSnapshotSplitReadTask [] - Snapshot step 1 - Determining low watermark {ts_sec=0, file=data.000863, pos=399018632, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404408541,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0} for split MySqlSnapshotSplit{tableId=config.configs, splitId='config.configs:0', splitKeyType=[`id` BIGINT NOT NULL], splitStart=null, splitEnd=null, highWatermark=null}
+2024-04-02 15:02:30,112 INFO  com.ververica.cdc.connectors.mysql.debezium.task.MySqlSnapshotSplitReadTask [] - Snapshot step 2 - Snapshotting data
+2024-04-02 15:02:30,112 INFO  com.ververica.cdc.connectors.mysql.debezium.task.MySqlSnapshotSplitReadTask [] - Exporting data from split 'config.configs:0' of table config.configs
+2024-04-02 15:02:30,113 INFO  com.ververica.cdc.connectors.mysql.debezium.task.MySqlSnapshotSplitReadTask [] - For split 'config.configs:0' of table config.configs using select statement: 'SELECT * FROM `config`.`configs`'
+2024-04-02 15:03:24,559 INFO  com.ververica.cdc.connectors.mysql.debezium.task.MySqlSnapshotSplitReadTask [] - Finished exporting 3860 records for split 'config.configs:0', total duration '00:00:54.446'
+2024-04-02 15:03:24,593 INFO  com.ververica.cdc.connectors.mysql.debezium.task.MySqlSnapshotSplitReadTask [] - Snapshot step 3 - Determining high watermark {ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0} for split MySqlSnapshotSplit{tableId=config.configs, splitId='config.configs:0', splitKeyType=[`id` BIGINT NOT NULL], splitStart=null, splitEnd=null, highWatermark=null}
+2024-04-02 15:03:24,664 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector MySqlConnector, id = mysql_binlog_source named = binlog-client
+2024-04-02 15:03:24,725 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - GTID set purged on server: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-385239353,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:24,726 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Attempting to generate a filtered GTID set
+2024-04-02 15:03:24,727 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - GTID set from previous recorded offset: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404408541,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:24,727 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - GTID set available on server: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410142,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:24,727 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Using first available positions for new GTID channels
+2024-04-02 15:03:24,727 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Relevant GTID set available on server: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410142,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:24,735 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Final merged GTID set to use when connecting to MySQL: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404408541,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:24,735 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Registering binlog reader with GTID set: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404408541,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:24,737 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Skip 0 events on streaming start
+2024-04-02 15:03:24,737 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Skip 0 rows on streaming start
+2024-04-02 15:03:24,740 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-mysqlconnector-mysql_binlog_source-binlog-client
+2024-04-02 15:03:24,757 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-mysqlconnector-mysql_binlog_source-binlog-client
+2024-04-02 15:03:24,892 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Connected to MySQL binlog at 10.30.10.10:3316, starting at MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=data.000863, currentBinlogPosition=399018632, currentRowNumber=0, serverId=0, sourceTime=null, threadId=-1, currentQuery=null, tableIds=[], databaseName=null], snapshotCompleted=false, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404408541,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, currentGtidSet=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404408541,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, restartBinlogFilename=data.000863, restartBinlogPosition=399018632, restartRowsToSkip=0, restartEventsToSkip=0, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]
+2024-04-02 15:03:24,893 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Waiting for keepalive thread to start
+2024-04-02 15:03:24,895 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-mysqlconnector-mysql_binlog_source-binlog-client
+2024-04-02 15:03:25,000 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Keepalive thread is running
+2024-04-02 15:03:27,135 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Stopped reading binlog after 0 events, last recorded offset: {transaction_id=null, ts_sec=1712041387, file=data.000863, pos=400829093, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410178,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, server_id=2840113910, event=2}
+2024-04-02 15:03:27,478 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-04-02 15:03:27,482 INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcher [] - Finished reading from splits [config.configs:0]
+2024-04-02 15:03:27,487 INFO  com.ververica.cdc.connectors.mysql.source.connection.JdbcConnectionPools [] - Create and register connection pool user_config@10.30.10.10:3316
+2024-04-02 15:03:27,493 INFO  com.ververica.cdc.connectors.shaded.com.zaxxer.hikari.HikariDataSource [] - connection-pool-10.30.10.10:3316 - Starting...
+2024-04-02 15:03:27,500 INFO  ru.yandex.clickhouse.ClickHouseDriver                        [] - Driver registered
+2024-04-02 15:03:27,731 INFO  com.ververica.cdc.connectors.shaded.com.zaxxer.hikari.HikariDataSource [] - connection-pool-10.30.10.10:3316 - Start completed.
+2024-04-02 15:03:28,471 INFO  com.ververica.cdc.runtime.operators.schema.SchemaOperator    [] - Table config.configs received SchemaChangeEvent and start to be blocked.
+2024-04-02 15:03:28,506 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaRegistryRequestHandler [] - Received schema change event request from table config.configs. Start to buffer requests for others.
+2024-04-02 15:03:28,515 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaManager [] - Handling schema change event: CreateTableEvent{tableId=config.configs, schema=columns={`id` BIGINT NOT NULL,`user_id` VARCHAR(255),`project_id` BIGINT,`name` VARCHAR(255) NOT NULL,`body` STRING,`json` STRING,`type` VARCHAR(255),`created_at` TIMESTAMP(0) NOT NULL,`updated_at` TIMESTAMP(0) NOT NULL,`deleted_at` TIMESTAMP(0),`draft_body` STRING}, primaryKeys=id;name, options=()}
+2024-04-02 15:03:28,524 INFO  com.ververica.cdc.runtime.operators.schema.SchemaOperator    [] - Sending the FlushEvent for table config.configs in subtask 0.
+2024-04-02 15:03:28,536 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaRegistry [] - Handling schema request: GetSchemaRequest{tableId=config.configs, schemaVersion=-1}
+2024-04-02 15:03:28,590 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - Stream load manager flush
+2024-04-02 15:03:28,591 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - All regions committed for savepoint, number of regions: 0
+2024-04-02 15:03:28,604 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaRegistry [] - Sink subtask 0 succeed flushing for table config.configs.
+2024-04-02 15:03:28,605 INFO  com.ververica.cdc.runtime.operators.schema.coordinator.SchemaRegistryRequestHandler [] - All sink subtask have flushed for table config.configs. Start to apply schema change.
+2024-04-02 15:03:28,747 INFO  com.starrocks.connector.flink.catalog.StarRocksCatalog       [] - Open StarRocks catalog
+2024-04-02 15:03:29,148 INFO  com.starrocks.connector.flink.catalog.StarRocksCatalog       [] - Success to create table config.config, sql: CREATE TABLE IF NOT EXISTS `config`.`configs` (
+`id` BIGINT NOT NULL,
+`name` VARCHAR(765) NOT NULL,
+`user_id` VARCHAR(765) NULL,
+`project_id` BIGINT NULL,
+`body` VARCHAR(1048576) NULL,
+`json` VARCHAR(1048576) NULL,
+`type` VARCHAR(765) NULL,
+`created_at` DATETIME NOT NULL,
+`updated_at` DATETIME NOT NULL,
+`deleted_at` DATETIME NULL,
+`draft_body` VARCHAR(1048576) NULL
+) PRIMARY KEY (`id`, `name`)
+DISTRIBUTED BY HASH (`id`, `name`)
+PROPERTIES (
+"replication_num" = "1",
+"light_schema_change" = "true"
+);
+2024-04-02 15:03:29,149 INFO  com.ververica.cdc.connectors.starrocks.sink.StarRocksMetadataApplier [] - Successful to create table, event: CreateTableEvent{tableId=config.configs, schema=columns={`id` BIGINT NOT NULL,`user_id` VARCHAR(255),`project_id` BIGINT,`name` VARCHAR(255) NOT NULL,`body` STRING,`json` STRING,`type` VARCHAR(255),`created_at` TIMESTAMP(0) NOT NULL,`updated_at` TIMESTAMP(0) NOT NULL,`deleted_at` TIMESTAMP(0),`draft_body` STRING}, primaryKeys=id;name, options=()}
+2024-04-02 15:03:29,158 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-04-02 15:03:30,337 INFO  org.apache.flink.connector.base.source.reader.SourceReaderBase [] - Finished reading split(s) [config.configs:0]
+2024-04-02 15:03:30,377 INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcherManager [] - Closing splitFetcher 0 because it is idle.
+2024-04-02 15:03:30,377 INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcher [] - Shutting down split fetcher 0
+2024-04-02 15:03:30,378 INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcher [] - Split fetcher 0 exited.
+2024-04-02 15:03:30,381 INFO  com.ververica.cdc.connectors.mysql.source.enumerator.MySqlSourceEnumerator [] - The enumerator under INITIAL_ASSIGNING receives finished split offsets FinishedSnapshotSplitsReportEvent{finishedOffsets={config.configs:0={ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0}}} from subtask 0.
+2024-04-02 15:03:30,382 INFO  com.ververica.cdc.connectors.mysql.source.assigners.AssignerStatus [] - Assigner status changes from INITIAL_ASSIGNING to INITIAL_ASSIGNING_FINISHED
+2024-04-02 15:03:30,382 INFO  com.ververica.cdc.connectors.mysql.source.assigners.MySqlSnapshotSplitAssigner [] - Snapshot split assigner received all splits finished and the job parallelism is 1, snapshot split assigner is turn into finished status.
+2024-04-02 15:03:30,385 INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator [] - Source Source: Flink CDC Event Source: mysql received split request from parallel task 0 (#0)
+2024-04-02 15:03:30,407 INFO  com.ververica.cdc.connectors.mysql.source.enumerator.MySqlSourceEnumerator [] - The enumerator assigns split MySqlBinlogSplit{splitId='binlog-split', offset={ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0}, endOffset={ts_sec=0, file=, pos=-9223372036854775808, kind=NON_STOPPING, row=0, event=0}, isSuspended=false} to subtask 0
+2024-04-02 15:03:30,426 INFO  com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReader [] - Source reader 0 adds split MySqlBinlogSplit{splitId='binlog-split', offset={ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0}, endOffset={ts_sec=0, file=, pos=-9223372036854775808, kind=NON_STOPPING, row=0, event=0}, isSuspended=false}
+2024-04-02 15:03:30,432 WARN  io.debezium.connector.mysql.MySqlConnection                  [] - Database configuration option 'serverTimezone' is set but is obsolete, please use 'connectionTimeZone' instead
+2024-04-02 15:03:30,435 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - Read list of available databases
+2024-04-02 15:03:30,736 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 list of available databases is: [information_schema, config, mysql]
+2024-04-02 15:03:30,736 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - Read list of available tables in each database
+2024-04-02 15:03:30,771 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.channel' is filtered out of table capturing
+2024-04-02 15:03:30,772 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.channel_relation' is filtered out of table capturing
+2024-04-02 15:03:30,772 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 including table 'config.configs' for further processing
+2024-04-02 15:03:30,772 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.debezium_signal' is filtered out of table capturing
+2024-04-02 15:03:30,772 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.dic-black-white-words' is filtered out of table capturing
+2024-04-02 15:03:30,772 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.dic-black-words-reasons' is filtered out of table capturing
+2024-04-02 15:03:30,773 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.dic-reasons-infos' is filtered out of table capturing
+2024-04-02 15:03:30,773 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.package_sign_infos' is filtered out of table capturing
+2024-04-02 15:03:30,773 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.projects' is filtered out of table capturing
+2024-04-02 15:03:30,773 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'config.versions' is filtered out of table capturing
+2024-04-02 15:03:30,797 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.event' is filtered out of table capturing
+2024-04-02 15:03:30,797 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.func' is filtered out of table capturing
+2024-04-02 15:03:30,797 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.general_log' is filtered out of table capturing
+2024-04-02 15:03:30,797 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_category' is filtered out of table capturing
+2024-04-02 15:03:30,797 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_keyword' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_relation' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.help_topic' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.proc' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.slow_log' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_leap_second' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_name' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_transition' is filtered out of table capturing
+2024-04-02 15:03:30,798 INFO  com.ververica.cdc.connectors.mysql.source.utils.TableDiscoveryUtils [] - 	 'mysql.time_zone_transition_type' is filtered out of table capturing
+2024-04-02 15:03:30,955 INFO  com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReader [] - Source reader 0 discovers table schema for binlog split binlog-split success
+2024-04-02 15:03:30,957 INFO  io.debezium.jdbc.JdbcConnection                              [] - Connection gracefully closed
+2024-04-02 15:03:30,959 INFO  com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReader [] - Source reader 0 received the binlog split : MySqlBinlogSplit{splitId='binlog-split', offset={ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0}, endOffset={ts_sec=0, file=, pos=-9223372036854775808, kind=NON_STOPPING, row=0, event=0}, isSuspended=false}.
+2024-04-02 15:03:30,962 INFO  org.apache.flink.connector.base.source.reader.SourceReaderBase [] - Adding split(s) to reader: [MySqlBinlogSplit{splitId='binlog-split', offset={ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0}, endOffset={ts_sec=0, file=, pos=-9223372036854775808, kind=NON_STOPPING, row=0, event=0}, isSuspended=false}]
+2024-04-02 15:03:30,965 INFO  org.apache.flink.connector.base.source.reader.fetcher.SplitFetcher [] - Starting split fetcher 1
+2024-04-02 15:03:30,967 INFO  com.ververica.cdc.connectors.mysql.source.reader.MySqlSplitReader [] - Handling split change SplitAddition:[[MySqlBinlogSplit{splitId='binlog-split', offset={ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0}, endOffset={ts_sec=0, file=, pos=-9223372036854775808, kind=NON_STOPPING, row=0, event=0}, isSuspended=false}]]
+2024-04-02 15:03:30,967 INFO  com.ververica.cdc.connectors.mysql.source.enumerator.MySqlSourceEnumerator [] - The enumerator receives notice from subtask 0 for the binlog split assignment. 
+2024-04-02 15:03:30,970 WARN  io.debezium.connector.mysql.MySqlConnection                  [] - Database configuration option 'serverTimezone' is set but is obsolete, please use 'connectionTimeZone' instead
+2024-04-02 15:03:31,112 INFO  com.ververica.cdc.connectors.mysql.debezium.task.context.StatefulTaskContext [] - Starting offset is initialized to {ts_sec=0, file=data.000863, pos=400803450, kind=SPECIFIC, gtids=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,
+1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,
+54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,
+54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,
+58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,
+f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, row=0, event=0}
+2024-04-02 15:03:31,128 INFO  com.ververica.cdc.connectors.mysql.debezium.task.context.StatefulTaskContext [] - Merging server GTID set 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410260,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6 with restored GTID set 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,128 INFO  com.ververica.cdc.connectors.mysql.debezium.task.context.StatefulTaskContext [] - Merged GTID set is 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,130 INFO  com.ververica.cdc.connectors.mysql.debezium.task.context.StatefulTaskContext [] - MySQL current GTID set 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410260,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6 does contain the GTID set 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6 required by the connector.
+2024-04-02 15:03:31,163 INFO  com.ververica.cdc.connectors.mysql.debezium.task.context.StatefulTaskContext [] - Server has already purged 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-385239353,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6 GTIDs
+2024-04-02 15:03:31,185 INFO  com.ververica.cdc.connectors.mysql.debezium.task.context.StatefulTaskContext [] - GTID set 1ad45efd-455a-11ee-be26-1c34da582dec:404410142-404410260 known by the server but not processed yet, for replication are available only GTID set 1ad45efd-455a-11ee-be26-1c34da582dec:404410142-404410260
+2024-04-02 15:03:31,192 INFO  io.debezium.util.Threads                                     [] - Requested thread factory for connector MySqlConnector, id = mysql_binlog_source named = binlog-client
+2024-04-02 15:03:31,248 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - GTID set purged on server: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-385239353,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,249 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Attempting to generate a filtered GTID set
+2024-04-02 15:03:31,249 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - GTID set from previous recorded offset: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,249 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - GTID set available on server: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410266,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,250 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Using first available positions for new GTID channels
+2024-04-02 15:03:31,250 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Relevant GTID set available on server: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410266,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,251 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Final merged GTID set to use when connecting to MySQL: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,251 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Registering binlog reader with GTID set: 06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6
+2024-04-02 15:03:31,251 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Skip 0 events on streaming start
+2024-04-02 15:03:31,251 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Skip 0 rows on streaming start
+2024-04-02 15:03:31,251 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-mysqlconnector-mysql_binlog_source-binlog-client
+2024-04-02 15:03:31,264 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-mysqlconnector-mysql_binlog_source-binlog-client
+2024-04-02 15:03:31,393 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Connected to MySQL binlog at 10.30.10.10:3316, starting at MySqlOffsetContext [sourceInfoSchema=Schema{io.debezium.connector.mysql.Source:STRUCT}, sourceInfo=SourceInfo [currentGtid=null, currentBinlogFilename=data.000863, currentBinlogPosition=400803450, currentRowNumber=0, serverId=0, sourceTime=null, threadId=-1, currentQuery=null, tableIds=[], databaseName=null], snapshotCompleted=false, transactionContext=TransactionContext [currentTransactionId=null, perTableEventCount={}, totalEventCount=0], restartGtidSet=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, currentGtidSet=06e967af-101f-11ee-af80-08c0eb16af3c:1-56019892,1ad45efd-455a-11ee-be26-1c34da582dec:1-404410141,54dbd6a2-22ec-11ea-9ab6-b8599f311b30:1-3685824,54f7afdf-22ec-11ea-b4a5-ec0d9ad4a55c:1-22396768,58d9de20-8669-11ed-b06c-0c42a1b74d0e:1-4894066,f6a389c0-35e1-11ee-be8c-b8599fb406d8:1-6, restartBinlogFilename=data.000863, restartBinlogPosition=400803450, restartRowsToSkip=0, restartEventsToSkip=0, currentEventLengthInBytes=0, inTransaction=false, transactionId=null, incrementalSnapshotContext =IncrementalSnapshotContext [windowOpened=false, chunkEndPosition=null, dataCollectionsToSnapshot=[], lastEventKeySent=null, maximumKey=null]]
+2024-04-02 15:03:31,394 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Waiting for keepalive thread to start
+2024-04-02 15:03:31,394 INFO  io.debezium.util.Threads                                     [] - Creating thread debezium-mysqlconnector-mysql_binlog_source-binlog-client
+2024-04-02 15:03:31,498 INFO  io.debezium.connector.mysql.MySqlStreamingChangeEventSource  [] - Keepalive thread is running
+2024-04-02 15:08:49,333 INFO  com.starrocks.data.load.stream.v2.TransactionTableRegion     [] - Flush uniqueKey : config-configs, label : null, bytes : 64171761, rows: 3877, reason: COMMIT
+2024-04-02 15:08:49,340 INFO  com.starrocks.data.load.stream.v2.TransactionTableRegion     [] - Stream load chunk, db: config, table: configs, numRows: 3877, rowBytes: 64171761, chunkBytes: 64175639
+2024-04-02 15:08:49,370 INFO  com.starrocks.data.load.stream.TransactionStreamLoader       [] - Transaction start, label : flink-4e57d708-53b7-4e97-bc35-7c1735a783b2
+2024-04-02 15:08:49,402 INFO  com.starrocks.data.load.stream.TransactionStreamLoader       [] - Transaction start, db: config, table: configs, label: flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, request : POST http://10.20.221.2:8030/api/transaction/begin HTTP/1.1
+2024-04-02 15:08:49,653 INFO  com.starrocks.data.load.stream.TransactionStreamLoader       [] - Transaction started, db: config, table: configs, label: flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, body : {
+    "Status": "OK",
+    "Message": "",
+    "Label": "flink-4e57d708-53b7-4e97-bc35-7c1735a783b2",
+    "TxnId": 34171,
+    "BeginTxnTimeMs": 1
+}
+2024-04-02 15:08:49,732 INFO  com.starrocks.data.load.stream.DefaultStreamLoader           [] - Stream loading, label : flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, region : config-configs, request : PUT http://10.20.221.2:8030/api/transaction/load HTTP/1.1
+2024-04-02 15:09:05,451 INFO  com.starrocks.data.load.stream.v2.ChunkHttpEntity            [] - Entity write end, uniqueKey: config-configs, contentLength : 64175639, total : 64175639
+2024-04-02 15:09:05,527 INFO  com.starrocks.data.load.stream.DefaultStreamLoader           [] - Stream load completed, label : flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, database : config, table : configs, body : {
+    "Status": "OK",
+    "Message": "",
+    "Label": "flink-4e57d708-53b7-4e97-bc35-7c1735a783b2",
+    "TxnId": 34171,
+    "LoadBytes": 64175639,
+    "StreamLoadPlanTimeMs": 1,
+    "ReceivedDataTimeMs": 98
+}
+2024-04-02 15:09:05,577 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - Receive load response, cacheByteBeforeFlush: 64171761, currentCacheBytes: 0, totalFlushRows : 3877
+2024-04-02 15:09:05,580 INFO  com.starrocks.data.load.stream.v2.TransactionTableRegion     [] - Stream load flushed, db: config, table: configs, label : flink-4e57d708-53b7-4e97-bc35-7c1735a783b2
+2024-04-02 15:09:05,580 INFO  com.starrocks.data.load.stream.v2.TransactionTableRegion     [] - Stream load completed, db: config, table: configs, label : flink-4e57d708-53b7-4e97-bc35-7c1735a783b2
+2024-04-02 15:09:05,638 INFO  com.starrocks.data.load.stream.TransactionStreamLoader       [] - Transaction prepare, label : flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, request : POST http://10.20.221.2:8030/api/transaction/prepare HTTP/1.1
+2024-04-02 15:09:06,227 INFO  com.starrocks.data.load.stream.TransactionStreamLoader       [] - Transaction prepared, label : flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, body : {
+    "Status": "OK",
+    "Message": "",
+    "Label": "flink-4e57d708-53b7-4e97-bc35-7c1735a783b2",
+    "TxnId": 34171,
+    "NumberTotalRows": 3877,
+    "NumberLoadedRows": 3877,
+    "NumberFilteredRows": 0,
+    "NumberUnselectedRows": 0,
+    "LoadBytes": 64175639,
+    "LoadTimeMs": 16576,
+    "StreamLoadPlanTimeMs": 1,
+    "ReceivedDataTimeMs": 98,
+    "WriteDataTimeMs": 16421,
+    "CommitAndPublishTimeMs": 2
+}
+2024-04-02 15:09:06,229 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - Receive load response, cacheByteBeforeFlush: 0, currentCacheBytes: 0, totalFlushRows : 3877
+2024-04-02 15:09:06,263 INFO  com.starrocks.data.load.stream.TransactionStreamLoader       [] - Transaction commit, label: flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, request : POST http://10.20.221.2:8030/api/transaction/commit HTTP/1.1
+2024-04-02 15:09:06,420 INFO  com.starrocks.data.load.stream.TransactionStreamLoader       [] - Transaction committed, lable: flink-4e57d708-53b7-4e97-bc35-7c1735a783b2, body : {
+  "Status": "OK",
+  "Message": "",
+  "Label": "flink-4e57d708-53b7-4e97-bc35-7c1735a783b2"
+}
+2024-04-02 15:09:06,421 INFO  com.starrocks.data.load.stream.v2.StreamLoadManagerV2        [] - Receive load response, cacheByteBeforeFlush: 0, currentCacheBytes: 0, totalFlushRows : 3877
+2024-04-02 15:09:06,423 INFO  com.starrocks.data.load.stream.v2.TransactionTableRegion     [] - Success to commit transaction: Transaction{database='config', table='configs', label='flink-4e57d708-53b7-4e97-bc35-7c1735a783b2', finish=false}, duration: 337193 ms
+2024-04-02 15:09:42,768 INFO  org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager [] - Shutting down TaskExecutorStateChangelogStoragesManager.
+2024-04-02 15:09:42,774 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Shutting down BLOB cache
+2024-04-02 15:09:42,774 INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager [] - Shutting down TaskExecutorLocalStateStoresManager.
+2024-04-02 15:09:42,769 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Shutting down BLOB cache
