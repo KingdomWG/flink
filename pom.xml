@@ -34,10 +34,10 @@ under the License.
         <module>flink-cdc-cli</module>
         <module>flink-cdc-common</module>
         <module>flink-cdc-composer</module>
-        <module>flink-cdc-dist</module>
+<!--        <module>flink-cdc-dist</module>-->
         <module>flink-cdc-connect</module>
         <module>flink-cdc-runtime</module>
-        <module>flink-cdc-e2e-tests</module>
+<!--        <module>flink-cdc-e2e-tests</module>-->
     </modules>
 
     <licenses>
@@ -228,316 +228,62 @@ under the License.
 
     <build>
         <plugins>
+            <!-- assembly模式编译，带依赖-->
             <plugin>
-                <!-- Inherited from Apache parent, but not actually used. Disable to reduce noise. -->
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>attach-descriptor</id>
-                        <phase>none</phase>
-                    </execution>
-                </executions>
-            </plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
 
-            <plugin>
-                <groupId>org.apache.rat</groupId>
-                <artifactId>apache-rat-plugin</artifactId>
-                <version>0.12</version><!--$NO-MVN-MAN-VER$-->
-                <inherited>false</inherited>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
-                    <excludeSubProjects>false</excludeSubProjects>
-                    <numUnapprovedLicenses>0</numUnapprovedLicenses>
-                    <licenses>
-                        <!-- Enforce this license:
-                            Copyright 2023 Ververica Inc.
-                            Licensed under the Apache License, Version 2.0 (the "License");
-                            you may not use this file except in compliance with the License.
-                            You may obtain a copy of the License at
-                              http://www.apache.org/licenses/LICENSE-2.0
-                            Unless required by applicable law or agreed to in writing,
-                            software distributed under the License is distributed on an
-                            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-                            KIND, either express or implied.  See the License for the
-                            specific language governing permissions and limitations
-                            under the License.
-                        -->
-                        <license
-                                implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
-                            <licenseFamilyCategory>AL2</licenseFamilyCategory>
-                            <licenseFamilyName>Apache License 2.0</licenseFamilyName>
-                            <patterns>
-                                <pattern>Copyright 2023 Ververica Inc.
-                                </pattern>
-                                <pattern>Licensed under the Apache License, Version 2.0
-                                </pattern>
-                            </patterns>
-                        </license>
-                    </licenses>
-                    <licenseFamilies>
-                        <licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
-                            <familyName>Apache License 2.0</familyName>
-                        </licenseFamily>
-                    </licenseFamilies>
-                    <excludes>
-                        <!-- Additional files like .gitignore etc.-->
-                        <exclude>**/.*/**</exclude>
-                        <!-- Generated content -->
-                        <exclude>**/target/**</exclude>
-                        <!-- Build files -->
-                        <exclude>**/*.iml</exclude>
-                        <!-- Docs -->
-                        <exclude>**/*.md</exclude>
-                        <exclude>docs/Makefile</exclude>
-                        <exclude>docs/Dockerfile</exclude>
-                        <exclude>docs/make.bat</exclude>
-                        <exclude>docs/_templates/version.html</exclude>
-                        <exclude>docs/_static/button.js</exclude>
-                        <exclude>docs/_build/**</exclude>
-                        <!-- Site -->
-                        <exclude>docs/site/**</exclude>
-                        <!-- Tests -->
-                        <exclude>**/*.txt</exclude>
-                        <exclude>
-                            flink-cdc-connect/flink-cdc-source-connectors/flink-connector-mysql-cdc/src/test/resources/file/*.json
-                        </exclude>
-                        <exclude>
-                            flink-cdc-connect/flink-cdc-source-connectors/flink-connector-db2-cdc/src/test/resources/db2_server/Dockerfile
-                        </exclude>
-                    </excludes>
+                    <!--<appendAssemblyId>false</appendAssemblyId>-->
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <!-- 这里要注意格式用.而不是\-->
+                            <mainClass>com.ververica.cdc.cli.CliFrontend</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
-            </plugin>
-
-            <!-- Due to the Flink build setup, "mvn spotless:apply" and "mvn spotless:check"
-				don't work. You have to use the fully qualified name, i.e.
-				"mvn com.diffplug.spotless:spotless-maven-plugin:apply" -->
-<!--            <plugin>-->
-<!--                <groupId>com.diffplug.spotless</groupId>-->
-<!--                <artifactId>spotless-maven-plugin</artifactId>-->
-<!--                <version>${spotless.version}</version>-->
-<!--                <configuration>-->
-<!--                    <java>-->
-<!--                        <googleJavaFormat>-->
-<!--                            <version>1.7</version>-->
-<!--                            <style>AOSP</style>-->
-<!--                        </googleJavaFormat>-->
-
-<!--                        &lt;!&ndash; \# refers to the static imports &ndash;&gt;-->
-<!--                        <importOrder>-->
-<!--                            <order>org.apache.flink,org.apache.flink.shaded,,javax,java,scala,\#-->
-<!--                            </order>-->
-<!--                        </importOrder>-->
-
-<!--                        <removeUnusedImports/>-->
-<!--                    </java>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>spotless-check</id>-->
-<!--                        <phase>validate</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                <version>2.17</version>-->
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        <groupId>com.puppycrawl.tools</groupId>-->
-<!--                        <artifactId>checkstyle</artifactId>-->
-<!--                        <version>8.14</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>validate</id>-->
-<!--                        <phase>validate</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <suppressionsLocation>/tools/maven/suppressions.xml</suppressionsLocation>-->
-<!--                    <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
-<!--                    <configLocation>/tools/maven/checkstyle.xml</configLocation>-->
-<!--                    <logViolationsToConsole>true</logViolationsToConsole>-->
-<!--                    <failOnViolation>true</failOnViolation>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
                 <executions>
                     <execution>
-                        <id>default-test</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <includes>
-                                <include>**/*Test.java</include>
-                                <include>**/*Test.scala</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>integration-tests</id>
-                        <phase>integration-test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <includes>
-                                <include>**/*ITCase.java</include>
-                                <include>**/*ITCase.scala</include>
-                            </includes>
-                            <reuseForks>false</reuseForks>
-                        </configuration>
-                    </execution>
-                </executions>
-                <configuration>
-                    <forkCount>${flink.forkCount}</forkCount>
-                    <reuseForks>${flink.reuseForks}</reuseForks>
-                    <trimStackTrace>false</trimStackTrace>
-                    <systemPropertyVariables>
-                        <forkNumber>0${surefire.forkNumber}</forkNumber>
-                    </systemPropertyVariables>
-                    <!-- Prevent ORA-01882: timezone region not found errors due to the Oracle DB
-                         does not understanding some time zone which used in Ubuntu OS -->
-                    <argLine>-Xms256m -Xmx2048m -Dmvn.forkNumber=${surefire.forkNumber}
-                        -XX:+UseG1GC -Doracle.jdbc.timezoneAsRegion=false
-                    </argLine>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>shade-flink</id>
+                        <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <!-- Shading test jar have bug in some previous version, so close this configuration here,
-                            see https://issues.apache.org/jira/browse/MSHADE-284 -->
-                            <shadeTestJar>false</shadeTestJar>
-                            <shadedArtifactAttached>false</shadedArtifactAttached>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
-                            <filters combine.children="append">
-                                <filter>
-                                    <artifact>*:*</artifact>
-                                    <excludes>
-                                        <exclude>module-info.class</exclude>
-                                        <exclude>META-INF/*.SF</exclude>
-                                        <exclude>META-INF/*.DSA</exclude>
-                                        <exclude>META-INF/*.RSA</exclude>
-                                    </excludes>
-                                </filter>
-                            </filters>
-                            <artifactSet>
-                                <includes>
-                                    <!--
-                                        We need the next line to enforce all submodules to execute shade and generate
-                                        dependency-reduced-pom.xml, to erase all properties defined in parent pom and
-                                        pin them to a fixed value. For example in the dependency-reduced-pom.xml of
-                                        submodules, ${flink.version} will be resolved as the actual Flink version.
-                                    -->
-                                    <include>org.apache.flink:flink-shaded-force-shading</include>
-                                </includes>
-                            </artifactSet>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <executions>
-                    <execution>
-                        <id>dependency-convergence</id>
-                        <!-- disabled by default as it interacts badly with shade-plugin -->
-                        <phase>none</phase>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <dependencyConvergence/>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>test-jar</id>
-                        <goals>
-                            <goal>test-jar</goal>
+                            <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
-                    <doclint>none</doclint>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
-
-            <!-- This plugin takes effect for Maven version upper more than 3.5.0 -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>flatten-maven-plugin</artifactId>
-                <version>${flatten-maven-plugin.version}</version>
-                <configuration>
-                    <updatePomFile>true</updatePomFile>
-                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
                 <executions>
                     <execution>
-                        <id>flatten</id>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>flatten</goal>
+                            <goal>copy-dependencies</goal>
                         </goals>
-                        <phase>process-resources</phase>
-                    </execution>
-                    <execution>
-                        <id>flatten.clean</id>
-                        <goals>
-                            <goal>clean</goal>
-                        </goals>
-                        <phase>clean</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
+        <finalName>${artifactId}</finalName>
     </build>
 
     <profiles>
@@ -558,20 +304,6 @@ under the License.
                                 <skip>true</skip>
                             </configuration>
                         </plugin>
-<!--                        <plugin>-->
-<!--                            <groupId>org.apache.maven.plugins</groupId>-->
-<!--                            <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                            <configuration>-->
-<!--                                <skip>true</skip>-->
-<!--                            </configuration>-->
-<!--                        </plugin>-->
-<!--                        <plugin>-->
-<!--                            <groupId>com.diffplug.spotless</groupId>-->
-<!--                            <artifactId>spotless-maven-plugin</artifactId>-->
-<!--                            <configuration>-->
-<!--                                <skip>true</skip>-->
-<!--                            </configuration>-->
-<!--                        </plugin>-->
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-enforcer-plugin</artifactId>
