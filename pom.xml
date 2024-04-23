@@ -17,21 +17,16 @@ under the License.
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <parent>
-        <groupId>org.apache</groupId>
-        <artifactId>apache</artifactId>
-        <version>20</version>
-    </parent>
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ververica</groupId>
+    <groupId>tech.echoing.bigdata</groupId>
     <artifactId>flink-cdc-connectors</artifactId>
     <version>3.0.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>flink-cdc-cli</module>
+<!--        <module>flink-cdc-cli</module>-->
         <module>flink-cdc-common</module>
         <module>flink-cdc-composer</module>
 <!--        <module>flink-cdc-dist</module>-->
@@ -49,13 +44,21 @@ under the License.
     </licenses>
 
     <distributionManagement>
+        <!--        <snapshotRepository>-->
+        <!--            <id>snapshots</id>-->
+        <!--            <url>http://localhost:8081/repository/maven-snapshots</url>-->
+        <!--        </snapshotRepository>-->
+        <!--        <repository>-->
+        <!--            <id>releases</id>-->
+        <!--            <url>http://localhost:8081/repository/maven-releases</url>-->
+        <!--        </repository>-->
         <snapshotRepository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>echo-snapshots</id>
+            <url>http://maven.echoing.tech/repository/maven-snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>echo-releases</id>
+            <url>http://maven.echoing.tech/repository/maven-releases</url>
         </repository>
     </distributionManagement>
 
@@ -372,23 +375,23 @@ under the License.
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <groupId>net.ju-n.maven.plugins</groupId>
-                        <artifactId>checksum-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>artifacts</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <algorithms>
-                                <algorithm>SHA-256</algorithm>
-                            </algorithms>
-                            <failOnError>false</failOnError>
-                        </configuration>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>net.ju-n.maven.plugins</groupId>-->
+<!--                        <artifactId>checksum-maven-plugin</artifactId>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <goals>-->
+<!--                                    <goal>artifacts</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                        <configuration>-->
+<!--                            <algorithms>-->
+<!--                                <algorithm>SHA-256</algorithm>-->
+<!--                            </algorithms>-->
+<!--                            <failOnError>false</failOnError>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
@@ -427,4 +430,6 @@ under the License.
             </build>
         </profile>
     </profiles>
+
+
 </project>
