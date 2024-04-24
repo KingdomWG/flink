@@ -18,7 +18,7 @@ under the License.
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>flink-cdc-source-connectors</artifactId>
-        <groupId>tech.echoing.bigdata</groupId>
+        <groupId>tech.echoing.bigdata.flinkcdc</groupId>
         <version>3.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -40,7 +40,7 @@ under the License.
         </dependency>
 
         <dependency>
-            <groupId>com.ververica</groupId>
+            <groupId>tech.echoing.bigdata.flinkcdc</groupId>
             <artifactId>flink-cdc-common</artifactId>
             <version>${project.version}</version>
         </dependency>

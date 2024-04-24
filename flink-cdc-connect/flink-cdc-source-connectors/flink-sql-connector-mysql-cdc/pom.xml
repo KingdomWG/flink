@@ -18,7 +18,7 @@ under the License.
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>flink-cdc-source-connectors</artifactId>
-        <groupId>tech.echoing.bigdata</groupId>
+        <groupId>tech.echoing.bigdata.flinkcdc</groupId>
         <version>3.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -27,7 +27,7 @@ under the License.
 
     <dependencies>
         <dependency>
-            <groupId>com.ververica</groupId>
+            <groupId>tech.echoing.bigdata.flinkcdc</groupId>
             <artifactId>flink-connector-mysql-cdc</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -55,8 +55,8 @@ under the License.
                                     <include>io.debezium:debezium-core</include>
                                     <include>io.debezium:debezium-ddl-parser</include>
                                     <include>io.debezium:debezium-connector-mysql</include>
-                                    <include>com.ververica:flink-connector-debezium</include>
-                                    <include>com.ververica:flink-connector-mysql-cdc</include>
+                                    <include>tech.echoing.bigdata.flinkcdc:flink-connector-debezium</include>
+                                    <include>tech.echoing.bigdata.flinkcdc:flink-connector-mysql-cdc</include>
                                     <include>org.antlr:antlr4-runtime</include>
                                     <include>org.apache.kafka:*</include>
                                     <include>mysql:mysql-connector-java</include>
@@ -87,35 +87,35 @@ under the License.
                                 <relocation>
                                     <pattern>org.apache.kafka</pattern>
                                     <shadedPattern>
-                                        com.ververica.cdc.connectors.shaded.org.apache.kafka
+                                        tech.echoing.bigdata.flinkcdc.cdc.connectors.shaded.org.apache.kafka
                                     </shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>org.antlr</pattern>
                                     <shadedPattern>
-                                        com.ververica.cdc.connectors.shaded.org.antlr
+                                        tech.echoing.bigdata.flinkcdc.cdc.connectors.shaded.org.antlr
                                     </shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.fasterxml</pattern>
                                     <shadedPattern>
-                                        com.ververica.cdc.connectors.shaded.com.fasterxml
+                                        tech.echoing.bigdata.flinkcdc.cdc.connectors.shaded.com.fasterxml
                                     </shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.google</pattern>
                                     <shadedPattern>
-                                        com.ververica.cdc.connectors.shaded.com.google
+                                        tech.echoing.bigdata.flinkcdc.cdc.connectors.shaded.com.google
                                     </shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.esri.geometry</pattern>
-                                    <shadedPattern>com.ververica.cdc.connectors.shaded.com.esri.geometry</shadedPattern>
+                                    <shadedPattern>tech.echoing.bigdata.flinkcdc.cdc.connectors.shaded.com.esri.geometry</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.zaxxer</pattern>
                                     <shadedPattern>
-                                        com.ververica.cdc.connectors.shaded.com.zaxxer
+                                        tech.echoing.bigdata.flinkcdc.cdc.connectors.shaded.com.zaxxer
                                     </shadedPattern>
                                 </relocation>
                             </relocations>
