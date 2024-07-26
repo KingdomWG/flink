@@ -66,7 +66,7 @@ under the License.
         <flink.reuseForks>true</flink.reuseForks>
 
         <!-- dependencies versions -->
-        <flink.version>1.18.0</flink.version>
+        <flink.version>1.18.1</flink.version>
         <flink.major.version>1.18</flink.major.version>
         <flink.shaded.version>17.0</flink.shaded.version>
         <debezium.version>1.9.7.Final</debezium.version>
@@ -109,6 +109,22 @@ under the License.
     <dependencies>
         <!-- Apache Flink dependencies -->
         <!-- These dependencies are provided, because they should not be packaged into the JAR file. -->
+        <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-kubernetes -->
+        <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-streaming-java -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java</artifactId>
+            <version>1.18.1.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-kubernetes</artifactId>
+            <version>1.18.1.1</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-table-common</artifactId>
